@@ -2,22 +2,22 @@ package com.xavier.practice.concurrent.semaphore.service;
 
 import java.util.concurrent.Semaphore;
 
-public abstract class ASemaphore {
+public class BaseSemaphore {
 
-    private Semaphore semaphore;
+    protected Semaphore semaphore;
 
-    public ASemaphore (Semaphore semaphore) {
+    public BaseSemaphore (Semaphore semaphore) {
         this.semaphore = semaphore;
     }
 
     public void testMethod() {
-        try{
+        try {
             semaphore.acquire();
             //<----------------------------------------------------------
             System.out.println(Thread.currentThread().getName() +
                     " begin timer = " + System.currentTimeMillis());
             Thread.sleep(5000);
-            System.out.println(Thread.currentThread().getName()+
+            System.out.println(Thread.currentThread().getName() +
                     " end timer = " + System.currentTimeMillis());
             //---------------------------------------------------------->
             semaphore.release();
@@ -25,4 +25,6 @@ public abstract class ASemaphore {
             e.printStackTrace();
         }
     }
+
+
 }

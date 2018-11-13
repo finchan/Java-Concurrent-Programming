@@ -1,11 +1,11 @@
 package com.xavier.practice.concurrent.semaphore.extthread;
 
-import com.xavier.practice.concurrent.semaphore.service.ASemaphore;
+import com.xavier.practice.concurrent.semaphore.service.BaseSemaphore;
 
 public class ThreadB extends Thread {
-    private ASemaphore service;
+    private BaseSemaphore service;
 
-    public ThreadB(ASemaphore service) {
+    public ThreadB(BaseSemaphore service) {
         super();
         this.service = service;
     }
