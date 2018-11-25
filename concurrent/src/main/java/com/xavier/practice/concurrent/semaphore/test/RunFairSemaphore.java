@@ -14,6 +14,7 @@ public class RunFairSemaphore {
         ThreadO [] threads = new ThreadO[4];
         for(int i=0; i<threads.length;i++) {
             threads[i] = new ThreadO(service);
+            threads[i].setName("T" + i);
             threads[i].start();
         }
     }
