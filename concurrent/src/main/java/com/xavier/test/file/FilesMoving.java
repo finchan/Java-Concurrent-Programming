@@ -1,4 +1,4 @@
-package com.xavier.test;
+package com.xavier.test.file;
 
 import java.io.*;
 import java.util.ArrayList;
